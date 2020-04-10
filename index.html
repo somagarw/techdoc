@@ -1,1 +1,480 @@
 
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>CodePen - FCC: Tribute Page</title>
+
+  <style>
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div>
+
+    <nav  id="navbar">
+      <header>JS Documentation</header>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#alreadyknow">What you should already know
+          </a></li>
+        <li><a href="#javascr">JavaScript and Java
+          </a></li>
+        <li><a href="#variab">Variables
+          </a></li>
+        <li><a href="#decvariab">Declaring variables
+
+          </a></li>
+        <li><a href="#variabscop">Variable scope
+
+          </a></li>
+        <li><a href="#globalvaria">Global variables
+
+          </a></li>
+        <li><a href="#cosntant">Constants
+          </a></li>
+        <li><a href="#ifelse">if...else statement
+
+
+          </a></li>
+        <li><a href="#whiles">while statement
+
+          </a></li>
+        <li><a href="#funcdec">Function declarations
+
+          </a></li>
+        <li><a href="#about">Reference
+
+          </a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section id="introduction">
+        <h1>Introduction</h1>
+        <article>
+        <p>
+          JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language.
+          Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its
+          environment to provide programmatic control over them. </p>
+
+        <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language
+          elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety
+          of purposes by supplementing it with additional objects; for example:</p>
+        <ul>
+          <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its
+            Document Object Model (DOM). For example, client-side extensions allow an application to place elements on
+            an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
+          </li>
+          <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a
+            server. For example, server-side extensions allow an application to communicate with a database, provide
+            continuity of information from one invocation to another of the application, or perform file manipulations
+            on a server.
+          </li>
+        </ul>
+      </article>
+      </section>
+      <section id="alreadyknow">
+        <h1>What you should already know
+        </h1>
+        <article>
+        <p>
+          This guide assumes you have the following basic background:
+
+        </p>
+
+        <ul>
+          <li>A general understanding of the Internet and the World Wide Web (WWW).
+
+          </li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).
+
+          </li>
+          <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main
+            page about JavaScript.
+
+
+          </li>
+        </ul>
+      </article>
+      </section>
+      <section id="javascr">
+        <h1>JavaScript and Java
+        </h1>
+        <article>
+
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+      <section id="variab">
+        <h1>Variables
+        </h1>
+        <article>
+
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+      <section id="decvariab">
+        <h1>Declaring variables
+        </h1>
+        <article>
+
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <code
+        >function greetMe(yourName) { alert("Hello " + yourName); }
+        greetMe("World");
+      </code>
+    </article>
+      </section>
+      <section id="variabscop">
+        <h1>variables Scope
+        </h1>
+        <article>
+
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+      <section id="globalvaria">
+        <h1>Global Variables
+        </h1>
+        <article>
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+      <section id="ifelse">
+        <h1>If Else Statements
+        </h1> <article>
+
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+      <section id="whiles">
+        <h1>While Loop
+        </h1>
+        <article>
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+      <section id="funcdec">
+        <h1>Function Declarations
+        </h1>
+        <article>
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+      <section id="about">
+        <h1>Refernce
+        </h1>
+        <article>
+        <p>
+          JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript
+          language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows
+          most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it
+          was renamed from LiveScript to JavaScript.
+
+        </p>
+
+        <p>
+          In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime
+          system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has
+          a prototype-based object model instead of the more common class-based object model. The prototype-based model
+          provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also
+          supports functions without any special declarative requirements. Functions can be properties of objects,
+          executing as loosely typed methods.
+
+        </p>
+
+        <p>
+          JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes,
+          and methods. You do not have to be concerned with whether methods are public, private, or protected, and you
+          do not have to implement interfaces. Variables, parameters, and function return types are not explicitly
+          typed.
+
+        </p>
+      </article>
+      </section>
+    </main>
+
+
+
+  </div>
+
+</body>
+
+</html>
