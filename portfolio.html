@@ -6,14 +6,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://kit.fontawesome.com/a90a2ab5a9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <title>Somil: Personal Portfolio </title>
 
   <style>
     html body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 100%;
+      position: relative; 
     }
-    
+
     #myHeader {
       background-color: rgb(143, 9, 9);
       display: block;
@@ -34,7 +39,7 @@
       display: block;
       color: white;
       text-align: center;
-      font-size: 1.0rem;
+      font-size: 2.0rem;
       padding: 2rem;
       text-decoration: none;
     }
@@ -48,26 +53,26 @@
     }
 
 
- 
-      #welcome {
+
+    #welcome {
       background-color: rgb(43, 39, 39);
       text-align: center;
       padding: 200px
     }
-    
-    #welcome h1{
-   font-size: 6rem;
-    color: whitesmoke;
-    padding: 0;
-    margin: 0;
+
+    #welcome h1 {
+      font-size: 6rem;
+      color: whitesmoke;
+      padding: 0;
+      margin: 0;
     }
 
-    #welcome p{
+    #welcome p {
       font-size: larger;
       font-style: italic;
-    color:rgb(196, 57, 57);
-    padding: 0;
-    margin: 0;
+      color: rgb(196, 57, 57);
+      padding: 0;
+      margin: 0;
     }
 
     #websites {
@@ -76,37 +81,38 @@
       padding: 100px;
     }
 
-    #websites h1{
+    #websites h1 {
       color: whitesmoke;
       text-align: center;
       padding: 0;
-    margin: 0;   
-    font-size: 2rem; 
-    
-    text-decoration: underline;
-}
+      margin: 0;
+      font-size: 2rem;
 
-#connect {
+      text-decoration: underline;
+    }
+
+    #connect {
       background-color: rgb(43, 39, 39);
       text-align: center;
       padding: 50px
     }
 
-    #connect h1{
+    #connect h1 {
       color: whitesmoke;
       text-align: center;
       padding: 0;
-    margin: 0;   
-    font-size: 3rem; 
+      margin: 0;
+      font-size: 3rem;
     }
 
-    #connect p{
- 
- display:inline;
+    #connect p {
+
+      display: inline;
 
 
     }
-    .fab{
+
+    .fab {
       color: whitesmoke;
       font-size: 2rem;
     }
@@ -117,56 +123,55 @@
     }
 
 
-    #myFooter p{
+    #myFooter p {
       font-size: small;
       font-style: italic;
-    color:whitesmoke;
-    padding: 0;
-    margin: 0;
-    margin-right: 5px;
-    text-align: right;
+      color: whitesmoke;
+      padding: 0;
+      margin: 0;
+      margin-right: 5px;
+      text-align: right;
     }
-
-
-@media only screen and (max-width: 600px) {
+    
+    @media only screen and (max-width: 600px) {
       #welcome {
         background-color: rgb(43, 39, 39);
-      text-align: center;
-      padding: 100px
-    }
+        text-align: center;
+        padding: 100px
+      }
 
-    #welcome h1{
-      font-size: 1rem;
-    color: whitesmoke;
-    padding: 0;
-    margin: 0;
+      #welcome h1 {
+        font-size: 1rem;
+        color: whitesmoke;
+        padding: 0;
+        margin: 0;
+      }
     }
-}
   </style>
 </head>
 
-<body>
+<body  data-spy="scroll" data-target=".navbar" data-offset="50">
 
- 
-    <nav id="myHeader">
-      <ul>
-        <li><a href="#connect">Contact</a></li>
-        <li><a href="#websites">Home</a></li>
-        <li><a href="#welcome">About</a></li>
-      </ul>
-    </nav>
- 
+
+  <nav  class="navbar navbar-fixed-top"  id="myHeader">
+    <ul>
+      <li><a href="#connect">Contact</a></li>
+      <li><a href="#websites">Home</a></li>
+      <li><a href="#welcome">About</a></li>
+    </ul>
+  </nav>
+
   <main>
     <section id="welcome">
-    <h1>Hey I am Somil</h1>
-        <p>a Software Developer
-        </p>
+      <h1>Hey I am Somil</h1>
+      <p>a Software Developer
+      </p>
     </section>
-  
+
     <section id="websites">
       <h1>
         These are some of my projects </h1>
-        </section>
+    </section>
 
 
     <section id="connect">
@@ -177,12 +182,12 @@
       <div>
         <p> <a href="https://www.linkedin.com/in/somagarw/" target="_blank"><i class="fab fa-linkedin"></i>
 
-        </a>
+          </a>
         </p>
 
       </div>
-   
-     
+
+
     </section>
   </main>
 
@@ -192,7 +197,7 @@
     </p>
   </footer>
 
-<script>
+  <script>
     window.onscroll = function () { myFunction() };
 
     var header = document.getElementById("myHeader");
