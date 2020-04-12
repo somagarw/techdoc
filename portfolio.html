@@ -6,17 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>CodePen - FCC: Tribute Page</title>
+  <title>Somil: Personal Portfolio </title>
 
   <style>
     html body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
-    @media screen {
-      
-    }
-
+    
     #myHeader {
       background-color: rgb(143, 9, 9);
       display: block;
@@ -43,7 +39,7 @@
     }
 
     li a:hover:not(.active) {
-      background-color: rgb(26, 172, 172);
+      background-color: rgb(128, 159, 201);
     }
 
     .active {
@@ -51,71 +47,95 @@
     }
 
 
-    .myFooter {
-      background-color: grey;
-    }
-
-    .myFooterdiv {
-      float: right;
-    }
-
-    #blackSec {
+ 
+      #welcome {
       background-color: rgb(43, 39, 39);
-      color: grey;
       text-align: center;
-      padding: 100px;
-
+      padding: 200px
+    }
+    
+    #welcome h1{
+   font-size: 6rem;
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
     }
 
-    .centerprice {
-      background-color: grey;
-      color: rgb(46, 45, 45);
-      font-size: 100px;
-      ;
-      margin: 10px 190px 10px 190px;
-    }
-
-    .worktgthr {
-      color: whitesmoke;
-      font-size: 70px;
-      ;
-      margin: 10px 190px 10px 190px;
-    }
-
-    .websiteslabel {
-      color: whitesmoke;
-      font-size: 40px;
-     text-align: center;
-     
-      margin: 10px 190px 10px 190px;
-    }
-
-    #wrktgthritalic {
+    #welcome p{
+      font-size: larger;
       font-style: italic;
-      font-size: xx-large !important;
-      color: whitesmoke;
+    color:rgb(196, 57, 57);
+    padding: 0;
+    margin: 0;
     }
 
-    #italic {
-      font-style: italic;
-      font-size: xx-large !important;
-      color: rgb(184, 55, 55);
-    }
-
-    #wesbites {
+    #websites {
       background-color: rgb(41, 91, 121);
       text-align: center;
       padding: 100px;
     }
 
-    .card {
-  width: 40%;
-  height: 60%;
+    #websites h1{
+      color: whitesmoke;
+      text-align: center;
+      padding: 0;
+    margin: 0;   
+    font-size: 2rem; 
+    
+    text-decoration: underline;
 }
 
-.container {
-  padding: 12px 16px;
-  background-color: black;
+#connect {
+      background-color: rgb(43, 39, 39);
+      text-align: center;
+      padding: 50px
+    }
+
+    #connect h1{
+      color: whitesmoke;
+      text-align: center;
+      padding: 0;
+    margin: 0;   
+    font-size: 3rem; 
+    }
+
+    #connect p{
+      font-size: larger;
+      font-style: italic;
+    color:whitesmoke;
+    padding: 0;
+    margin: 0;
+    }
+
+    #myFooter {
+      background-color: grey;
+    }
+
+
+    #myFooter p{
+      font-size: small;
+      font-style: italic;
+    color:whitesmoke;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    text-align: right;
+    }
+
+
+@media only screen and (max-width: 600px) {
+      #welcome {
+        background-color: rgb(43, 39, 39);
+      text-align: center;
+      padding: 100px
+    }
+
+    #welcome h1{
+      font-size: 2rem;
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    }
 }
   </style>
 </head>
@@ -125,43 +145,39 @@
   <header id="myHeader">
     <nav>
       <ul>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#news">Home</a></li>
-        <li><a href="#home">About</a></li>
+        <li><a href="#connect">Contact</a></li>
+        <li><a href="#websites">Home</a></li>
+        <li><a href="#welcome">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div id="blackSec">
-      <div class="centerprice">
-        Hey I am Somil
-      </div>
-      <div id="italic">a web Developer
-      </div>
-    </div>
-    <div id="wesbites">
-      <div class="websiteslabel">
-        These are some of my projects </div>
+    <section id="welcome">
+    <h1>Hey I am Somil</h1>
+        <p>a web Developer
+        </p>
+    </section>
+  
+    <section id="websites">
+      <h1>
+        These are some of my projects </h1>
+        </section>
 
 
-        
-
-
-    </div>
-    <div id="blackSec">
-      <div class="worktgthr">
+    <section id="connect">
+      <h1>
         Let's Work Together...
-      </div>
-      <div id="wrktgthritalic">How do you take your coffee?
-      </div>
-    </div>
+      </h1>
+      <p>How do you take your coffee?
+      </p>
+    </section>
   </main>
 
-  <footer class="myFooter">
-    <div>
-      © Created for Somil
-    </div>
+  <footer id="myFooter">
+    <p>
+      © Created By Somil
+    </p>
   </footer>
 
 <script>
